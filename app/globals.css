@@ -3,11 +3,17 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --accent: #f1f5f9;
+  --accent-foreground: #0f172a;
+  --border: #e2e8f0;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -16,6 +22,9 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --accent: #1e293b;
+    --accent-foreground: #f1f5f9;
+    --border: #334155;
   }
 } 
 
@@ -23,4 +32,57 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Ensure backdrop blur works */
+@supports (backdrop-filter: blur(10px)) {
+  .backdrop-blur {
+    backdrop-filter: blur(10px);
+  }
+}
+
+/* Custom gradients for the lamp effect */
+.bg-gradient-radial {
+  background-image: radial-gradient(ellipse at center, var(--tw-gradient-stops));
+}
+
+/* Lamp-specific animations and effects */
+@keyframes lamp-flicker {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.9; }
+}
+
+.lamp-flicker {
+  animation: lamp-flicker 3s ease-in-out infinite;
+}
+
+/* 3D Transform utilities */
+.transform-3d {
+  transform-style: preserve-3d;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-2000 {
+  perspective: 2000px;
+}
+
+/* Ensure proper 3D rendering */
+* {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/* Smooth image loading */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Grid line animations */
+@keyframes grid-fade {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.4; }
 }
