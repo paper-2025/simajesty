@@ -59,18 +59,18 @@ const sampleImages = [
 
 export default function About() {
     return (
-        <div className="min-h-screen pt-32 px-8 pb-20">
+        <div className="min-h-screen pt-32 px-8 pb-20 select-none">
             <div className="max-w-6xl mx-auto">
-                <h1 className="text-4xl font-bold mb-8 text-center relative z-10">
+                <h1 className="text-4xl font-bold mb-8 text-center relative z-10 cursor-default">
                     About Us
                 </h1>
                 
                 <div className="prose prose-lg mx-auto relative z-10 mb-16 max-w-3xl">
-                    <p className="text-lg mb-6 text-center">
+                    <p className="text-lg mb-6 text-center cursor-default select-text">
                         Welcome to our Next.js application! This page demonstrates the beautiful lamp effect 
                         that illuminates your content from the navbar, combined with stunning 3D visual elements.
                     </p>
-                    <p className="text-lg mb-6 text-center">
+                    <p className="text-lg mb-6 text-center cursor-default select-text">
                         Below you'll see our interactive 3D gallery showcasing our work and projects. 
                         The images animate in a mesmerizing pattern, creating depth and visual interest.
                     </p>
@@ -78,7 +78,7 @@ export default function About() {
 
                 {/* 3D Marquee Gallery */}
                 <div className="relative z-10 mb-16">
-                    <h2 className="text-3xl font-semibold mb-8 text-center">Our Work Gallery</h2>
+                    <h2 className="text-3xl font-semibold mb-8 text-center cursor-default">Our Work Gallery</h2>
                     <ThreeDMarquee 
                         images={sampleImages}
                         className="mb-8"
@@ -86,39 +86,39 @@ export default function About() {
                 </div>
 
                 <div className="max-w-3xl mx-auto relative z-10">
-                    <div className="bg-background/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6">
+                    <div className="bg-background/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 cursor-default">
                         <h2 className="text-2xl font-semibold mb-4">Features</h2>
                         <div className="grid md:grid-cols-2 gap-6">
-                            <div>
+                            <div className="select-none">
                                 <h3 className="text-lg font-medium mb-2 text-cyan-400">Visual Effects</h3>
-                                <ul className="list-disc list-inside space-y-1 text-sm">
+                                <ul className="list-disc list-inside space-y-1 text-sm select-text cursor-text">
                                     <li>3D rotating image gallery</li>
                                     <li>Animated lamp effect</li>
                                     <li>Smooth hover interactions</li>
                                     <li>Dynamic grid animations</li>
                                 </ul>
                             </div>
-                            <div>
+                            <div className="select-none">
                                 <h3 className="text-lg font-medium mb-2 text-cyan-400">Technical Stack</h3>
-                                <ul className="list-disc list-inside space-y-1 text-sm">
+                                <ul className="list-disc list-inside space-y-1 text-sm select-text cursor-text">
                                     <li>Next.js 15 with App Router</li>
                                     <li>Framer Motion animations</li>
                                     <li>Tailwind CSS styling</li>
                                     <li>TypeScript for type safety</li>
                                 </ul>
                             </div>
-                            <div>
+                            <div className="select-none">
                                 <h3 className="text-lg font-medium mb-2 text-cyan-400">Design System</h3>
-                                <ul className="list-disc list-inside space-y-1 text-sm">
+                                <ul className="list-disc list-inside space-y-1 text-sm select-text cursor-text">
                                     <li>Responsive design patterns</li>
                                     <li>Dark/light theme support</li>
                                     <li>Modern UI components</li>
                                     <li>Accessibility focused</li>
                                 </ul>
                             </div>
-                            <div>
+                            <div className="select-none">
                                 <h3 className="text-lg font-medium mb-2 text-cyan-400">User Experience</h3>
-                                <ul className="list-disc list-inside space-y-1 text-sm">
+                                <ul className="list-disc list-inside space-y-1 text-sm select-text cursor-text">
                                     <li>Intuitive navigation</li>
                                     <li>Smooth page transitions</li>
                                     <li>Mobile-first approach</li>

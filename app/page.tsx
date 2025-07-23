@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 pt-32">
+    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 pt-32 select-none">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start relative z-30">
         <div className="relative">
           <Image
@@ -16,13 +16,13 @@ export default function Home() {
             priority
           />
           {/* Subtle glow effect under the logo */}
-          <div className="absolute inset-0 -z-10 bg-cyan-400/20 blur-2xl rounded-full scale-150" />
+          <div className="absolute inset-0 -z-10 bg-cyan-400/20 blur-2xl rounded-full scale-150 pointer-events-none" />
         </div>
         
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left relative z-10">
+        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left relative z-10 cursor-default">
           <li className="mb-2 tracking-[-.01em]">
             Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded backdrop-blur-sm border border-cyan-400/20">
+            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded backdrop-blur-sm border border-cyan-400/20 select-text cursor-text">
               app/page.tsx
             </code>
             .
@@ -34,7 +34,7 @@ export default function Home() {
 
         <div className="flex gap-4 items-center flex-col sm:flex-row relative z-10">
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto hover:shadow-lg hover:shadow-cyan-400/20"
+            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto hover:shadow-lg hover:shadow-cyan-400/20 cursor-pointer focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:ring-offset-2 select-none"
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
@@ -49,7 +49,7 @@ export default function Home() {
             Deploy now
           </a>
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px] hover:shadow-lg hover:shadow-cyan-400/10 backdrop-blur-sm"
+            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px] hover:shadow-lg hover:shadow-cyan-400/10 backdrop-blur-sm cursor-pointer focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:ring-offset-2 select-none"
             href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
