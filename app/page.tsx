@@ -60,7 +60,7 @@ export default function Home() {
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center relative z-10">
         <CustomButton link='/contact' name='Contact' />
-        <CustomButton link='/contact' name='About' />
+        <CustomButton link='/about' name='About' />
         <CustomButton link='/contact' name='Services' />
       </footer>
     </div>
