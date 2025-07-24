@@ -9,18 +9,17 @@ const Footer = () => {
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
-    { name: "Services", href: "#services" },
+    { name: "Volunteer", href: "/contact" },
   ]
 
-  const services = [
-    { name: "Web Development", href: "#web-dev" },
-    { name: "Mobile Apps", href: "#mobile" },
-    { name: "UI/UX Design", href: "#design" },
-    { name: "Consulting", href: "#consulting" },
+  const programs = [
+    { name: "Mobile Healthcare", href: "#mobile-healthcare" },
+    { name: "Emergency Response", href: "#emergency" },
+    { name: "Health Education", href: "#education" },
+    { name: "Community Outreach", href: "#outreach" },
   ]
 
   const socialLinks = [
-    { name: "GitHub", href: "https://github.com", icon: Github },
     { name: "Twitter", href: "https://twitter.com", icon: Twitter },
     { name: "LinkedIn", href: "https://linkedin.com", icon: Linkedin },
   ]
@@ -33,36 +32,39 @@ const Footer = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           
-          {/* Company Info */}
+          {/* Foundation Info */}
           <div className="col-span-1 lg:col-span-2">
-            <Link href="/" className="flex items-center space-x-2 mb-4">
-              <Image
-                className="dark:invert"
-                src="/next.svg"
-                alt="Company Logo"
-                width={120}
-                height={24}
-                priority
-              />
-            </Link>
+            <div className="mb-4">
+              <Link href="/" className="flex items-center space-x-2 mb-4">
+                <Image
+                  className="dark:invert"
+                  src="/company-logo.png"
+                  alt="Dr. Obe Charity Foundation Logo"
+                  width={120}
+                  height={24}
+                  priority
+                />
+              </Link>
+              <p className="text-sm text-foreground/70 font-medium">Transforming Rural Healthcare in Nigeria</p>
+            </div>
             <p className="text-foreground/70 mb-6 max-w-md">
-              Building modern, scalable web applications with cutting-edge technologies. 
-              We create digital experiences that inspire and engage users worldwide.
+              Bridging the healthcare gap in underserved rural communities through preventive care, 
+              emergency medical services, and community health education programs across Nigeria.
             </p>
             
             {/* Contact Info */}
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3 text-sm text-foreground/70">
                 <MapPin className="h-4 w-4 text-cyan-400" />
-                <span>123 Tech Street, Innovation City, IC 12345</span>
+                <span>15 Healthcare Drive, Victoria Island, Lagos, Nigeria</span>
               </div>
               <div className="flex items-center space-x-3 text-sm text-foreground/70">
                 <Phone className="h-4 w-4 text-cyan-400" />
-                <span>+1 (555) 123-4567</span>
+                <span>+234 (0) 813 456 7890</span>
               </div>
               <div className="flex items-center space-x-3 text-sm text-foreground/70">
                 <Mail className="h-4 w-4 text-cyan-400" />
-                <span>hello@yourcompany.com</span>
+                <span>info@drobecharityfoundation.org</span>
               </div>
             </div>
 
@@ -101,17 +103,17 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Our Programs */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Services</h3>
+            <h3 className="font-semibold text-foreground mb-4">Our Programs</h3>
             <ul className="space-y-3">
-              {services.map((service) => (
-                <li key={service.name}>
+              {programs.map((program) => (
+                <li key={program.name}>
                   <Link
-                    href={service.href}
+                    href={program.href}
                     className="text-foreground/70 hover:text-cyan-400 transition-colors duration-200 text-sm"
                   >
-                    {service.name}
+                    {program.name}
                   </Link>
                 </li>
               ))}
@@ -123,9 +125,9 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-border/50">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
             <div className="mb-6 md:mb-0">
-              <h3 className="font-semibold text-foreground mb-2">Stay Updated</h3>
+              <h3 className="font-semibold text-foreground mb-2">Stay Informed About Our Mission</h3>
               <p className="text-foreground/70 text-sm">
-                Subscribe to our newsletter for the latest updates and insights.
+                Subscribe to receive updates on our healthcare programs, impact stories, and volunteer opportunities.
               </p>
             </div>
             <div className="flex space-x-3 max-w-md w-full md:w-auto">
@@ -134,7 +136,7 @@ const Footer = () => {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-2 bg-accent/50 border border-border/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400 transition-all duration-200 text-sm"
               />
-              <button className="px-6 py-2 bg-cyan-400 hover:bg-cyan-500 text-white rounded-lg transition-colors duration-200 font-medium text-sm">
+              <button className="px-6 py-2 bg-gradient-to-r from-cyan-400 to-cyan-500 hover:from-cyan-500 hover:to-cyan-600 text-white rounded-lg transition-colors duration-200 font-medium text-sm">
                 Subscribe
               </button>
             </div>
@@ -145,7 +147,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-border/50">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between">
             <div className="text-foreground/70 text-sm mb-4 md:mb-0">
-              © {currentYear} Your Company Name. All rights reserved.
+              © {currentYear} Dr. Obe Charity Foundation. All rights reserved. | Registered NGO in Nigeria
             </div>
             <div className="flex space-x-6 text-sm">
               <Link href="#privacy" className="text-foreground/70 hover:text-cyan-400 transition-colors duration-200">
@@ -154,8 +156,8 @@ const Footer = () => {
               <Link href="#terms" className="text-foreground/70 hover:text-cyan-400 transition-colors duration-200">
                 Terms of Service
               </Link>
-              <Link href="#cookies" className="text-foreground/70 hover:text-cyan-400 transition-colors duration-200">
-                Cookie Policy
+              <Link href="#transparency" className="text-foreground/70 hover:text-cyan-400 transition-colors duration-200">
+                Financial Transparency
               </Link>
             </div>
           </div>

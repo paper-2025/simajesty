@@ -14,7 +14,6 @@ interface FormData {
   privacy: boolean;
 }
 
-// Success Modal Component
 const SuccessModal = ({ isOpen, onClose, userName }: { isOpen: boolean; onClose: () => void; userName: string }) => {
   return (
     <AnimatePresence>
@@ -34,7 +33,6 @@ const SuccessModal = ({ isOpen, onClose, userName }: { isOpen: boolean; onClose:
             className="relative bg-background border border-cyan-400/20 rounded-2xl p-8 max-w-md w-full shadow-2xl select-none"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Close button */}
             <button
               onClick={onClose}
               className="absolute top-4 right-4 p-2 rounded-full hover:bg-accent transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400/50"
@@ -42,9 +40,7 @@ const SuccessModal = ({ isOpen, onClose, userName }: { isOpen: boolean; onClose:
               <X className="h-5 w-5" />
             </button>
 
-            {/* Success content */}
             <div className="text-center select-none">
-              {/* Animated success icon */}
               <motion.div
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
@@ -54,14 +50,13 @@ const SuccessModal = ({ isOpen, onClose, userName }: { isOpen: boolean; onClose:
                 <CheckCircle className="h-8 w-8 text-white" />
               </motion.div>
 
-              {/* Success message */}
               <motion.h2
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
                 className="text-2xl font-bold mb-3 text-foreground"
               >
-                Message Sent Successfully! 🎉
+                Thank You for Your Support! 🙏
               </motion.h2>
 
               <motion.p
@@ -71,10 +66,9 @@ const SuccessModal = ({ isOpen, onClose, userName }: { isOpen: boolean; onClose:
                 className="text-foreground/70 mb-6"
               >
                 Thank you, <span className="font-semibold text-cyan-400">{userName}</span>! 
-                I've received your message and will get back to you within 24 hours.
+                We've received your message and will get back to you within 24 hours to discuss how you can help transform rural healthcare in Nigeria.
               </motion.p>
 
-              {/* Animated sparkles */}
               <div className="relative mb-6 pointer-events-none">
                 <motion.div
                   animate={{ 
@@ -104,7 +98,6 @@ const SuccessModal = ({ isOpen, onClose, userName }: { isOpen: boolean; onClose:
                 </motion.div>
               </div>
 
-              {/* Action button */}
               <motion.button
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -158,10 +151,7 @@ export default function Contact() {
             const data = await response.json();
 
             if (response.ok) {
-                // Show success modal instead of toast
                 setShowSuccessModal(true);
-                
-                // Reset form
                 setFormData({
                     firstName: '',
                     lastName: '',
@@ -186,15 +176,16 @@ export default function Contact() {
             <div className="pt-32 px-8 pb-20 select-none">
                 <div className="max-w-6xl mx-auto">
                     <div className="text-center mb-16 relative z-10">
-                        <h1 className="text-4xl font-bold mb-6 cursor-default">Get in Touch</h1>
+                        <h1 className="text-4xl font-bold mb-6 cursor-default bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent">
+                            Partner With Our Mission
+                        </h1>
                         <p className="text-lg text-foreground/70 max-w-2xl mx-auto cursor-default">
-                            Ready to start your next project? We'd love to hear from you. 
-                            Send us a message and we'll respond as soon as possible.
+                            Join us in transforming rural healthcare in Nigeria. Whether you're interested in 
+                            volunteering, donating, or partnering with us, we'd love to hear from you.
                         </p>
                     </div>
 
                     <div className="grid lg:grid-cols-3 gap-12 relative z-10">
-                        {/* Contact Info Cards */}
                         <div className="space-y-8">
                             <div className="bg-background/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 cursor-default select-none">
                                 <div className="flex items-center space-x-4 mb-4">
@@ -206,8 +197,8 @@ export default function Contact() {
                                         <p className="text-sm text-foreground/70">Send us an email anytime</p>
                                     </div>
                                 </div>
-                                <p className="text-foreground/80 select-text cursor-text">desmondathisbest@gmail.com</p>
-                                <p className="text-foreground/80 select-text cursor-text">support@yourcompany.com</p>
+                                <p className="text-foreground/80 select-text cursor-text">info@drobecharityfoundation.org</p>
+                                <p className="text-foreground/80 select-text cursor-text">partnerships@drobecharityfoundation.org</p>
                             </div>
 
                             <div className="bg-background/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 cursor-default select-none">
@@ -217,11 +208,11 @@ export default function Contact() {
                                     </div>
                                     <div>
                                         <h3 className="font-semibold">Call Us</h3>
-                                        <p className="text-sm text-foreground/70">Mon-Fri from 8am to 5pm</p>
+                                        <p className="text-sm text-foreground/70">Mon-Fri from 8am to 6pm (WAT)</p>
                                     </div>
                                 </div>
-                                <p className="text-foreground/80 select-text cursor-text">+1 (555) 123-4567</p>
-                                <p className="text-foreground/80 select-text cursor-text">+1 (555) 123-4568</p>
+                                <p className="text-foreground/80 select-text cursor-text">+234 (0) 813 456 7890</p>
+                                <p className="text-foreground/80 select-text cursor-text">+234 (0) 802 123 4567</p>
                             </div>
 
                             <div className="bg-background/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 cursor-default select-none">
@@ -231,13 +222,14 @@ export default function Contact() {
                                     </div>
                                     <div>
                                         <h3 className="font-semibold">Visit Us</h3>
-                                        <p className="text-sm text-foreground/70">Come say hello at our office</p>
+                                        <p className="text-sm text-foreground/70">Our headquarters and training center</p>
                                     </div>
                                 </div>
                                 <address className="text-foreground/80 not-italic select-text cursor-text">
-                                    123 Tech Street<br />
-                                    Innovation City, IC 12345<br />
-                                    United States
+                                    Dr. Obe Charity Foundation<br />
+                                    15 Healthcare Drive<br />
+                                    Victoria Island, Lagos<br />
+                                    Nigeria
                                 </address>
                             </div>
 
@@ -259,10 +251,9 @@ export default function Contact() {
                             </div>
                         </div>
 
-                        {/* Contact Form */}
                         <div className="lg:col-span-2">
                             <div className="bg-background/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-8 cursor-default">
-                                <h2 className="text-2xl font-semibold mb-6">Send us a Message</h2>
+                                <h2 className="text-2xl font-semibold mb-6">Partner With Our Mission</h2>
                                 <form onSubmit={handleSubmit} className="space-y-6">
                                     <div className="grid md:grid-cols-2 gap-6">
                                         <div>
@@ -324,7 +315,7 @@ export default function Contact() {
                                             value={formData.subject}
                                             onChange={handleChange}
                                             className="w-full px-4 py-3 bg-accent/50 border border-border/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400 transition-all duration-200 cursor-text"
-                                            placeholder="How can we help you?"
+                                            placeholder="Partnership opportunity, volunteer inquiry, donation, etc."
                                             required
                                         />
                                     </div>
@@ -340,7 +331,7 @@ export default function Contact() {
                                             value={formData.message}
                                             onChange={handleChange}
                                             className="w-full px-4 py-3 bg-accent/50 border border-border/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:border-cyan-400 transition-all duration-200 resize-none cursor-text"
-                                            placeholder="Tell us more about your project..."
+                                            placeholder="Tell us how you'd like to support our mission or get involved..."
                                             required
                                         ></textarea>
                                     </div>
@@ -373,36 +364,35 @@ export default function Contact() {
                         </div>
                     </div>
 
-                    {/* FAQ Section */}
                     <div className="mt-20 relative z-10">
                         <h2 className="text-3xl font-semibold mb-12 text-center cursor-default">Frequently Asked Questions</h2>
                         <div className="grid md:grid-cols-2 gap-8">
                             <div className="bg-background/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 cursor-default select-none">
-                                <h3 className="font-semibold mb-3 text-cyan-400">How quickly can you start my project?</h3>
+                                <h3 className="font-semibold mb-3 text-cyan-400">How can I volunteer with your organization?</h3>
                                 <p className="text-foreground/70 text-sm select-text cursor-text">
-                                    We typically begin new projects within 1-2 weeks of signing the contract, 
-                                    depending on our current workload and project complexity.
+                                    We welcome volunteers from various backgrounds including medical professionals, 
+                                    educators, and community mobilizers. Contact us to learn about current volunteer opportunities.
                                 </p>
                             </div>
                             <div className="bg-background/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 cursor-default select-none">
-                                <h3 className="font-semibold mb-3 text-cyan-400">What technologies do you work with?</h3>
+                                <h3 className="font-semibold mb-3 text-cyan-400">What areas of Nigeria do you serve?</h3>
                                 <p className="text-foreground/70 text-sm select-text cursor-text">
-                                    We specialize in modern web technologies including React, Next.js, Node.js, 
-                                    TypeScript, and various cloud platforms like AWS and Vercel.
+                                    We focus on underserved rural communities across Nigeria, with mobile medical units 
+                                    and emergency response teams reaching the most remote areas where healthcare access is limited.
                                 </p>
                             </div>
                             <div className="bg-background/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 cursor-default select-none">
-                                <h3 className="font-semibold mb-3 text-cyan-400">Do you provide ongoing support?</h3>
+                                <h3 className="font-semibold mb-3 text-cyan-400">How are donations used?</h3>
                                 <p className="text-foreground/70 text-sm select-text cursor-text">
-                                    Yes! We offer various support packages including maintenance, updates, 
-                                    and technical support to keep your application running smoothly.
+                                    Donations support our mobile clinics, medical supplies, staff training, emergency response equipment, 
+                                    and community health education programs. We provide transparent financial reporting to all donors.
                                 </p>
                             </div>
                             <div className="bg-background/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 cursor-default select-none">
-                                <h3 className="font-semibold mb-3 text-cyan-400">What is your pricing structure?</h3>
+                                <h3 className="font-semibold mb-3 text-cyan-400">Can corporations partner with you?</h3>
                                 <p className="text-foreground/70 text-sm select-text cursor-text">
-                                    Our pricing varies based on project scope and complexity. We offer both 
-                                    fixed-price contracts and hourly rates. Contact us for a detailed quote.
+                                    Yes! We actively seek corporate partnerships for CSR initiatives, employee volunteering programs, 
+                                    and technical support. Contact us to discuss partnership opportunities.
                                 </p>
                             </div>
                         </div>
@@ -410,7 +400,6 @@ export default function Contact() {
                 </div>
             </div>
 
-            {/* Success Modal */}
             <SuccessModal 
                 isOpen={showSuccessModal} 
                 onClose={() => setShowSuccessModal(false)} 

@@ -30,10 +30,10 @@ const Navbar = () => {
           <Link href="/" className="flex items-center space-x-2">
             <Image
               className="dark:invert"
-              src="/next.svg"
-              alt="Logo"
-              width={120}
-              height={24}
+              src="/company-logo.png"
+              alt="Company Logo"
+              width={250}
+              height={22}
               priority
             />
           </Link>
@@ -44,7 +44,7 @@ const Navbar = () => {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-foreground/80 hover:text-foreground transition-colors duration-200 font-medium"
+                className="text-foreground/80 hover:text-foreground transition-colors duration-200 font-medium select-none"
               >
                 {link.label}
               </Link>
@@ -75,7 +75,7 @@ const Navbar = () => {
                       key={link.href}
                       href={link.href}
                       onClick={() => setIsOpen(false)}
-                      className="text-lg font-medium text-foreground hover:text-foreground/80 transition-colors duration-200 py-2"
+                      className="text-lg font-medium text-foreground hover:text-foreground/80 transition-colors duration-200 py-2 select-none"
                     >
                       {link.label}
                     </Link>
