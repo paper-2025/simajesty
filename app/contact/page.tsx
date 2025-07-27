@@ -197,8 +197,8 @@ export default function Contact() {
                                         <p className="text-sm text-foreground/70">Send us an email anytime</p>
                                     </div>
                                 </div>
-                                <p className="text-foreground/80 select-text cursor-text">info@drobecharityfoundation.org</p>
-                                <p className="text-foreground/80 select-text cursor-text">partnerships@drobecharityfoundation.org</p>
+                                <p className="text-foreground/80 select-text cursor-text">obefoundation4charity@gmail.com</p>
+                            
                             </div>
 
                             <div className="bg-background/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 cursor-default select-none">
@@ -211,8 +211,8 @@ export default function Contact() {
                                         <p className="text-sm text-foreground/70">Mon-Fri from 8am to 6pm (WAT)</p>
                                     </div>
                                 </div>
-                                <p className="text-foreground/80 select-text cursor-text">+234 (0) 813 456 7890</p>
-                                <p className="text-foreground/80 select-text cursor-text">+234 (0) 802 123 4567</p>
+                                <p className="text-foreground/80 select-text cursor-text">+234  9030083129</p>
+                                <p className="text-foreground/80 select-text cursor-text">+1    9159992005</p>
                             </div>
 
                             <div className="bg-background/50 backdrop-blur-sm border border-cyan-400/20 rounded-lg p-6 cursor-default select-none">
@@ -227,9 +227,14 @@ export default function Contact() {
                                 </div>
                                 <address className="text-foreground/80 not-italic select-text cursor-text">
                                     Dr. Obe Charity Foundation<br />
-                                    15 Healthcare Drive<br />
-                                    Victoria Island, Lagos<br />
+                                    170 Ademola Adetokunbo Crescent<br />
+                                    Wuse 2,Abuja<br />
                                     Nigeria
+                                </address><address className="text-foreground/80 not-italic select-text cursor-text">
+                                    Dr. Obe Charity Foundation<br />
+                                    14361 Earl Chokiski Ave<br />
+                                    El Paso TX 79938<br />
+                                    USA
                                 </address>
                             </div>
 

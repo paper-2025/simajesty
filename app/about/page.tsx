@@ -4,8 +4,8 @@ import { ThreeDMarquee } from "@/components/ThreeDMarquee";
 const healthcareImages = [
    "/1.jpg", "/2.jpg", "/3.jpg", "/4.jpg", "/5.jpg", "/6.jpg", "/7.jpg", "/8.jpg",
   "/9.jpg", "/10.jpg", "/11.jpg", "/12.jpg", "/13.jpg", "/14.jpg", "/15.jpg", "/16.jpg",
-  "/17.jpg", "/18.jpg", "/19.jpg", "/20.jpg", "/21.jpg", "/22.jpg", "/23.jpg", "/24.jpg",
-  "/25.jpg", "/26.jpg", "/27.jpg", "/28.jpg", "/29.jpg", "/30.jpg", "/31.jpg"]
+  "/17.jpg", "/18.jpg", "/19.jpg", "/20.jpg", "/21.jpg", "/22.jpg", "/23.jpg", "/24.jpg", "/25.jpg",
+"/26.jpg", "/27.jpg", "/28.jpg", "/29.jpg", "/30.jpg", "/31.jpg", "/32.jpg"]
 export default function About() {
     return (
         <div className="min-h-screen pt-32 px-8 pb-20 select-none">
@@ -24,7 +24,7 @@ export default function About() {
                         <div className="text-3xl mb-4">🎯</div>
                         <h2 className="text-2xl font-semibold mb-4 text-cyan-400">Our Vision</h2>
                         <p className="text-lg cursor-default select-text">
-                            Provide accessible, culturally sensitive preventive and emergency healthcare to rural Nigeria.
+                           To ensure that every home in Africa has basic knowledge of life-saving skills.
                         </p>
                     </div>
                     
@@ -32,8 +32,9 @@ export default function About() {
                         <div className="text-3xl mb-4">🚀</div>
                         <h2 className="text-2xl font-semibold mb-4 text-cyan-400">Our Mission</h2>
                         <p className="text-lg cursor-default select-text">
-                            To bridge the healthcare gap in underserved areas through innovation, advocacy, and collaboration 
-                            with community leaders and government.
+                            To be the first establishment that focuses on picking young unemployed youth from the
+        streets and making them useful by equipping them with lifesaving skills needed in our
+        society, thereby providing them with employment opportunities.
                         </p>
                     </div>
                 </div>

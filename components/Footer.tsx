@@ -56,15 +56,17 @@ const Footer = () => {
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3 text-sm text-foreground/70">
                 <MapPin className="h-4 w-4 text-cyan-400" />
-                <span>15 Healthcare Drive, Victoria Island, Lagos, Nigeria</span>
+                <span>170 Ademola Adetokunbo Crescent Wuse 2,Abuja,Nigeria</span>
+                <span>14361 Earl Chokiski Ave El Paso TX 79938, USA</span>
               </div>
               <div className="flex items-center space-x-3 text-sm text-foreground/70">
                 <Phone className="h-4 w-4 text-cyan-400" />
-                <span>+234 (0) 813 456 7890</span>
+                <span>+234  9030083129</span>
+                <span>+1    9159992005</span>
               </div>
               <div className="flex items-center space-x-3 text-sm text-foreground/70">
                 <Mail className="h-4 w-4 text-cyan-400" />
-                <span>info@drobecharityfoundation.org</span>
+                <span>obefoundation4charity@gmail.com</span>
               </div>
             </div>
 
