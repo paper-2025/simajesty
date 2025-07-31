@@ -30,7 +30,6 @@ const Navbar = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
             <Image
-              className="dark:invert"
               src="/company-logo.png"
               alt="Company Logo"
               width={250}

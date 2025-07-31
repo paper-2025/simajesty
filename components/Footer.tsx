@@ -37,7 +37,6 @@ const Footer = () => {
             <div className="mb-4">
               <Link href="/" className="flex items-center space-x-2 mb-4">
                 <Image
-                  className="dark:invert"
                   src="/company-logo.png"
                   alt="Dr. Obe Charity Foundation Logo"
                   width={120}
